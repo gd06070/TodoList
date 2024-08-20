@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const monthYear = document.querySelector("#monthYear");
     const prevMonthBtn = document.querySelector("#prev-month");
     const nextMonthBtn = document.querySelector("#next-month");
+    const createTodoBtn = document.getElementById("createTodo_Btn"); //20240820 추가 
     
-    let currentDate = new Date(2024, 7); // 0 = 1월이라 1적게 써야함
+    let currentDate = new Date(); // 0 = 1월이라 1적게 써야함
+    let today = new Date();
 
     function renderCalendar(date) {
         calendar.innerHTML = '';
@@ -32,8 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     cell.classList.add('next-month');
                 } else {
                     cell.textContent = day;
-                    cell.classList.add('current-month');
-                    day++;
+                    // 20240820 추가
+                    // 오늘 날짜에 표시 추가
+                    if (date.getFullYear() === today.getFullYear() &&
+                        date.getMonth() === today.getMonth() &&
+                        day === today.getDate()) {
+                        cell.classList.add('today');
+                    } else {
+                        cell.classList.add('current-month');
+                    }
+                    day++;   
                 }
                 row.appendChild(cell);
             }
@@ -51,13 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
         renderCalendar(currentDate);
     });
 
+    // 202040820 추가 => 투두리스트 생성 버튼 동작
+    createTodoBtn.addEventListener("click", function() {
+        window.location.href = 'create.html'; 
+    });
+
     renderCalendar(currentDate);
 
 
     //createTodo btn 모달 테스트
-    const btn = document.getElementById("createTodo_Btn"); // 모달을 띄우는 버튼 요소 가져오기
-
-    btn.onclick = function () {
-        modal.style.display = "block"; // 버튼을 클릭하면 모달을 보이게 함
-      };
+    
 });

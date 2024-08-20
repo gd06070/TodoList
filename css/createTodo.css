@@ -1,0 +1,100 @@
+#todo_list_container {
+    display: flex;
+    flex-direction: column; /* 항목들을 가로로 배치 */
+    justify-content: center;
+    align-items: center; /* 항목들을 수평 방향으로 가운데 정렬 */
+    gap: 10px; /* 항목 간의 간격 */
+    width:100%;
+}
+
+.todo-item-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+}
+
+#backBtn_div button {
+    background-color: transparent;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#new_input {
+    width: 450px; 
+    height: 30px;
+    padding: 3px;
+}
+
+#newSubmitBtn {
+    padding: 7px;
+    margin-left: 15px;
+    font-size: 16px;
+    background-color: transparent;
+    color: black;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+#createTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#todoList_create_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* To-do 추가했을때 리스트 css */
+.todo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 450px;
+}
+
+.todo-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+/* 삭제·수정 버튼 */
+.buttonContainer {
+    /* display: flex; */
+    justify-content: center;
+    gap: 10px; /* 버튼 간의 간격 조정 */
+    margin-left: 10px;
+}
+
+/* 삭제&수정 버튼 CSS */
+.buttonContainer button {
+    padding: 5px 10px; 
+    background-color: transparent;
+    margin-right: 7px;
+    border: solid 1px black; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 14px; 
+}
+
+.buttonContainer button:hover {
+    opacity: 0.8; 
+}
+
+
