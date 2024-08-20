@@ -1,0 +1,80 @@
+#cal_header_container {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+#cal_container {
+    background-color: #FFE7EF;
+    opacity: 70%;
+    border-radius: 20px;
+}
+
+#cal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cal_header > #monthYear {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#cal_header button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#calendar th, #calendar td {
+    padding: 10px;
+    width: 14%;
+    text-align: center;
+}
+
+#calendar th {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+#calendar td {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev-month {
+    font-weight: normal !important; /* !important : 우선순위를 높이는 것 => 지금 td 우선순위가 더 높은지 이거 안쓰면 normal이 적용이 안 됨 */
+    color: gray;
+}
+
+.next-month {
+    font-weight: normal !important; 
+    color: gray;
+}
+
+#todo_btn_container {
+    margin-bottom: 10px;
+}
+
+#createTodo_Btn {
+    padding: 8px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #FF0199;
+    border: solid 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+

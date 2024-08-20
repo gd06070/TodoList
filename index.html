@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/modal.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="cal_header_container">
+        <div id="cal_header">
+            <button id="prev-month">&lt;</button>
+            <span id="monthYear">2024년 8월</span>
+            <button id="next-month">&gt;</button>
+        </div>
+
+        <div id="cal_container">
+            <table id="calendar">
+                <thead>
+                    <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="todo_btn_container">
+            <button id="createTodo_Btn">Create new To-do</button>
+        </div>
+
+        <div id="goal_color_box">
+            <img src="./img/goal_box.PNG" alter = "cal_color_guide" width="400px" height="70px">
+        </div>
+    </div>    
+</body>
+</html>
